@@ -1,0 +1,15 @@
+{
+  "choose language": "choose language",
+  "my_addresses": "My addresses \uD83D\uDD0D",
+  "add_address": "Add address \uD83D\uDC4D",
+  "remove_address": "Remove address ❌",
+  "please_send_address": "Please send your Obyte address",
+  "incorrect_address": "You entered an incorrect address, please try again",
+  "address_added_successfully": "Address added successfully",
+  "your_addresses": "Your addresses: \n",
+  "select_address": "Select the address you want to remove",
+  "address_deleted": "Address successfully deleted",
+  "back": "Back",
+  "what_do_you_want_to_do": "What do you want to do?",
+  "new_payment": "New payment to address ${address}"
+}

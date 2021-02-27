@@ -1,0 +1,15 @@
+{
+  "choose language": "Выберите язык",
+  "my_addresses": "Мои адреса \uD83D\uDD0D",
+  "add_address": "Добавить адрес \uD83D\uDC4D",
+  "remove_address": "Удалить адрес ❌",
+  "please_send_address": "Пожалуйста отправьте ваш Obyte адрес",
+  "incorrect_address": "Вы ввели некорректный адрес, попробуйте ещё раз",
+  "address_added_successfully": "Адрес успешно добавлен",
+  "your_addresses": "Ваши адреса: \n",
+  "select_address": "Выберите адрес который нужно удалить",
+  "address_deleted": "Адрес успешно удалён",
+  "back": "Назад",
+  "what_do_you_want_to_do": "Что вы хотите сделать?",
+  "new_payment": "Новый платёж на адрес ${address}"
+}
