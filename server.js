@@ -27,7 +27,7 @@ bot.use(session());
 bot.use(i18n.middleware());
 bot.use(async (ctx, next) => {
   ctx.user = await Users.findOne({ chat_id: ctx.message.chat.id });
-  if (ctx.user.language) {
+  if (ctx.user && ctx.user.language) {
     ctx.i18n.locale(ctx.user.language);
   }
   await next();
