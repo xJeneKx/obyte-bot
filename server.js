@@ -6,7 +6,7 @@ const fastify = require('fastify');
 const { Telegraf, Markup, Scenes, session } = require('telegraf');
 const telegrafPlugin = require('fastify-telegraf');
 const TelegrafI18n = require('telegraf-i18n');
-const { botToken, webhookUrl, secretPath } = require('./src/conf');
+const { botToken, webhookUrl, secretPath, dev } = require('./src/conf');
 const { isValidAddress } = require('obyte/lib/utils');
 const { mainMenuKeyboard, languageKeyboard } = require('./src/keyboards');
 const addAddressScene = require('./src/scenes/addAddressScene');
@@ -104,6 +104,9 @@ async function start() {
     }
   });
 
+  if (dev) {
+    await bot.launch();
+  }
   const addresses = await getAllAddresses();
   myEmitter.emit('init', addresses);
 }
@@ -114,19 +117,24 @@ myEmitter.on('new_payment', async (obj) => {
     const user = users[k];
     await bot.telegram.sendMessage(
       user.chat_id,
-      i18n.t(user.language, 'new_payment', { address: obj.address })
+      i18n.t(user.language, 'new_payment', {
+        address: obj.address,
+        asset: obj.asset,
+        amount: obj.amount,
+      })
     );
   }
 });
 
 start().catch(console.error);
+if (!dev) {
+  const app = fastify();
+  app.register(telegrafPlugin, { bot, path: secretPath });
+  bot.telegram.setWebhook(webhookUrl).then(() => {
+    console.log('Webhook is set on', webhookUrl);
+  });
 
-const app = fastify();
-app.register(telegrafPlugin, { bot, path: secretPath });
-bot.telegram.setWebhook(webhookUrl).then(() => {
-  console.log('Webhook is set on', webhookUrl);
-});
-
-app.listen(7841).then(() => {
-  console.log('Listening on port', 7841);
-});
+  app.listen(7841).then(() => {
+    console.log('Listening on port', 7841);
+  });
+}

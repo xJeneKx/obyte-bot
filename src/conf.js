@@ -9,4 +9,5 @@ module.exports = {
   botToken: process.env.BOT_TOKEN,
   webhookUrl: process.env.WEBHOOK_URL,
   secretPath: process.env.SECRET_PATH,
+  dev: !!process.env.dev,
 };

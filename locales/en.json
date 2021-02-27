@@ -11,5 +11,5 @@
   "address_deleted": "Address successfully deleted",
   "back": "Back",
   "what_do_you_want_to_do": "What do you want to do?",
-  "new_payment": "New payment to address ${address}"
+  "new_payment": "New payment ${amount} ${asset}\nto address ${address}"
 }
