@@ -3,7 +3,7 @@
   "my_addresses": "Мои адреса \uD83D\uDD0D",
   "add_address": "Добавить адрес \uD83D\uDC4D",
   "remove_address": "Удалить адрес ❌",
-  "please_send_address": "Пожалуйста отправьте ваш Obyte адрес",
+  "please_send_address": "Пожалуйста, отправьте ваш Obyte адрес",
   "incorrect_address": "Вы ввели некорректный адрес, попробуйте ещё раз",
   "address_added_successfully": "Адрес успешно добавлен",
   "your_addresses": "Ваши адреса: \n",
@@ -11,5 +11,5 @@
   "address_deleted": "Адрес успешно удалён",
   "back": "Назад",
   "what_do_you_want_to_do": "Что вы хотите сделать?",
-  "new_payment": "Новый платёж ${amount} ${asset}\nна адрес ${address}"
+  "new_payment": "\uD83D\uDFE2  Новый платёж:\n\n\uD83D\uDCB0 Сумма - ${amount} ${asset}\n\uD83D\uDCCC На адрес - ${address}\n\n${explorer_link}"
 }

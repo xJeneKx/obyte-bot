@@ -1,15 +1,15 @@
 {
-  "choose language": "choose language",
+  "choose language": "Choose language",
   "my_addresses": "My addresses \uD83D\uDD0D",
   "add_address": "Add address \uD83D\uDC4D",
   "remove_address": "Remove address ❌",
   "please_send_address": "Please send your Obyte address",
-  "incorrect_address": "You entered an incorrect address, please try again",
-  "address_added_successfully": "Address added successfully",
+  "incorrect_address": "You have entered an incorrect address, please try again",
+  "address_added_successfully": "Address was successfully added",
   "your_addresses": "Your addresses: \n",
   "select_address": "Select the address you want to remove",
-  "address_deleted": "Address successfully deleted",
+  "address_deleted": "Address was successfully deleted",
   "back": "Back",
   "what_do_you_want_to_do": "What do you want to do?",
-  "new_payment": "New payment ${amount} ${asset}\nto address ${address}"
+  "new_payment": "\uD83D\uDFE2  New payment:\n\n\uD83D\uDCB0 Amount - ${amount} ${asset}\n\uD83D\uDCCC To address - ${address}\n\n${explorer_link}"
 }
