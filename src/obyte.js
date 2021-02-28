@@ -32,6 +32,7 @@ client.subscribe(async (err, result) => {
             address: r.address,
             asset,
             amount: r.amount / 10 ** decimals,
+            unit: result[1].body.unit.unit,
           });
         });
       }

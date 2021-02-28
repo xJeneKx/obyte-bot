@@ -121,6 +121,7 @@ myEmitter.on('new_payment', async (obj) => {
         address: obj.address,
         asset: obj.asset,
         amount: obj.amount,
+        explorer_link: `https://explorer.obyte.org/#${obj.unit}`,
       })
     );
   }
